@@ -24,6 +24,10 @@ document.addEventListener("DOMContentLoaded", function () {
                         el: pagi,
                         clickable: true,
                     },
+                    // autoplay: {
+                    //     delay: 3000,
+                    //     disableOnInteraction: false,
+                    // },
                 });
             });
         }
@@ -39,7 +43,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 var prev = item.querySelector(".swiper-button-prev");
                 var pagi = item.querySelector(".swiper-pagination");
                 new Swiper(slider, {
-                    slidesPerView: 2,
+                    slidesPerView: 1,
                     spaceBetween: 15,
                     slidesPerGroup: 1,
                     navigation: {
@@ -48,6 +52,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     },
                     pagination: {
                         el: pagi || null,
+                        clickable: true,
                     },
                     // autoplay: {
                     //     delay: 3000,
@@ -59,6 +64,45 @@ document.addEventListener("DOMContentLoaded", function () {
                         },
                         1024: {
                             slidesPerView: 3,
+                            spaceBetween: 30,
+                        }
+                    },
+                });
+            });
+        }
+    }
+
+    // khởi tạo slider với 4 item
+    function initSliderFourItems() {
+        const fourSlides = document.querySelectorAll(".js__fourSlidesContainer");
+        if (fourSlides) {
+            fourSlides.forEach((item) => {
+                var slider = item.querySelector(".js__fourSlide");
+                var next = item.querySelector(".swiper-button-next");
+                var prev = item.querySelector(".swiper-button-prev");
+                var pagi = item.querySelector(".swiper-pagination");
+                new Swiper(slider, {
+                    slidesPerView: 1,
+                    spaceBetween: 15,
+                    slidesPerGroup: 1,
+                    navigation: {
+                        nextEl: next || null,
+                        prevEl: prev || null,
+                    },
+                    pagination: {
+                        el: pagi || null,
+                        clickable: true,
+                    },
+                    // autoplay: {
+                    //     delay: 3000,
+                    //     disableOnInteraction: false,
+                    // },
+                    breakpoints: {
+                        768: {
+                            slidesPerView: 2,
+                        },
+                        1024: {
+                            slidesPerView: 4,
                             spaceBetween: 30,
                         }
                     },
@@ -95,20 +139,23 @@ document.addEventListener("DOMContentLoaded", function () {
         const collapses = document.querySelectorAll('.js__collapse')
         if (collapses.length === 0) return;
         let activeItem = null;
+
         collapses.forEach((collapse)=>{
             collapse.onclick = function() {
-            if (activeItem === this) {
-                this.classList.remove('active'); 
-                activeItem = null; 
-            } else {
-                
-                if (activeItem) {
-                    activeItem.classList.remove('active');
-                }
-                
-                this.classList.add('active');
-                activeItem = this; 
-            }
+                // khi item đang mở
+                if (activeItem === this) {
+                    this.classList.remove('active'); 
+                    activeItem = null; 
+                } else {
+                    // khi không có item nào mở
+                    if (activeItem) {
+                        activeItem.classList.remove('active');
+                    }
+                    this.classList.add('active');
+                    activeItem = this; 
+                    
+                }  
+                 
             }
            
         })
@@ -274,6 +321,7 @@ document.addEventListener("DOMContentLoaded", function () {
         // slide
         initSliderOneItems();
         initSliderThreeItems();
+        initSliderFourItems();
         handleCollapse();
         handleChangeTab();
         window.addEventListener('scroll',handleWindowScroll);
