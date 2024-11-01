@@ -2253,6 +2253,14 @@ table th {
   border-color: #ff9222;
 }
 
+.categories-block__content .item-text:last-child .text-link {
+  border-bottom: none;
+}
+
+.recent-post-block__content .item-text:last-child {
+  border-bottom: none;
+}
+
 .follow-us-block .follow-us-social .social-item {
   --size:40px;
   width: var(--size);
