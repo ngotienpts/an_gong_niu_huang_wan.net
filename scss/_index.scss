@@ -12,6 +12,12 @@
         }
     }
 }
+
+.heading-three {
+    padding-left: 15px;
+    border-left: 4px solid #ff9222;
+    line-height: 1;
+}
 .pane-item {
     display: none;
     &.active {

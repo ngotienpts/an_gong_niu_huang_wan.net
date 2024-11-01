@@ -1,0 +1,190 @@
+
+.detail-shop-primary {
+    .plus-minus {
+        display: inline-block;
+    }
+    .cart-plus-minus {
+        display: inline-block;
+        position: relative;
+        margin-right: 15px;
+    }
+    .cart-plus-minus input {
+        height: 56px;
+        width: 100px;
+        border: 0;
+        border: 2px solid #eaedff;
+        text-align: center;
+        -moz-appearance: none;
+        appearance: none;
+        border-radius: 999px;
+        padding: 15px;
+        font-size: 15px;
+    }
+}
+
+.detail-shop-secondary {
+    &__container {
+        padding-top: 10px !important;
+    }
+
+    &__row {
+        .tabs-block {
+            margin-bottom: 50px;
+            border-bottom: 2px solid #e1e1e1;
+
+            .tab-item {
+                .text {
+                    display: inline-block;
+                    padding-bottom: 30px;
+                    position: relative;
+
+                    &::before {
+                        content: '';
+                        width: 100%;
+                        height: 2px;
+                        position: absolute;
+                        bottom: -2px;
+                        background-color: transparent;
+                    }
+                }
+
+                &.active {
+                    .text {
+                        color: #ff9222;
+
+                        &::before {
+                            background-color: #ff9222;
+                        }
+                    }
+                }
+                
+            }
+        }
+
+    }
+}
+
+// detail blog
+.detail-title {
+    font-size: 32px;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    font-family: 'Raleway', sans-serif;
+    color: #181E23;
+    font-weight: bold;
+}
+
+.detail-sapo {
+    font-size: 17px;
+}
+.detail-content {
+
+    & figure {
+        margin-bottom: 1.25rem;
+
+        img {
+            width: 100%;
+            height: auto !important;
+            margin: auto;
+        }
+    }
+    & figure figcaption {
+        background: #f7f7f7;
+        padding: 0.625rem 0.9375rem;
+        font-size: 14px;
+        display: block;
+        margin: 0 auto;
+        max-width: 100%;
+        line-height: 1.25rem;
+        color: #555;
+    }
+    & figure figcaption em {
+        font-style: italic;
+    }
+    & p a {
+        color: #ff9222;
+        font-style: italic;
+        
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    & p,
+    & li {
+        font-size: 15px;
+        margin-bottom: 18px;
+        line-height: 160%;
+        word-break: break-word;
+        color: #62605c;
+
+    }
+    & ul {
+        padding-left: 30px;
+    }
+    & ul li {
+        list-style: disc;
+    }
+    & > h2,
+    & > h3,
+    & > h4,
+    & > h5,
+    & > h6 {
+        font-weight: bold;
+        margin-bottom: 15px;
+        font-family: 'Raleway', sans-serif;
+        color: #181E23;
+    }
+    & > h2 {
+        font-size: 30px;
+    }
+    & > h3 {
+        font-size: 28px;
+    }
+    & > h4 {
+        font-size: 24px;
+    }
+    & > h5 {
+        font-size: 20px;
+    }
+    & > h6 {
+        font-size: 18px;
+    }
+
+    & blockquote {
+        background: #242d2e;
+        border-radius: 10px;
+        padding: 40px;
+        position: relative;
+        z-index: 5;
+        text-align: center;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        display: inline-block;
+        width: 100%;
+        font-size: 18px;
+        color: #fff;
+
+        & p {
+            color: #fff;
+            font-size: 18px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+        h2,h3,h4,h5,h6 {
+            color: #fff;
+        }
+
+        a {
+            color: #ff9222;
+        }
+    }
+
+}
+
+
+.realted-post {
+    .article {
+        margin-bottom: 10px;
+    }
+}

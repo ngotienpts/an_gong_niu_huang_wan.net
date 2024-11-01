@@ -236,6 +236,14 @@
         }
     }
 
+    // blog
+    .block-wrapper {
+        .block-right {
+            max-width: 100%;
+            margin-top: 40px;
+        }
+    }
+
     // --------------------------------------------------------------------detail
     .detail-shop-primary {
         &__left {
@@ -318,6 +326,13 @@
     //     padding-top: 60px;
     //     padding-bottom: 60px;
     // }
+    .py-sm-60 {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+    .play-large {
+        --size: 60px;
+    }
     // --------------------------------------------------------------------header
     .header-mb {
         &__left {
@@ -452,7 +467,83 @@
         }
     }
 
+    .block-wrapper {
+        margin: 0;
+
+        .block-left,
+        .block-right  {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+
+
+    .blog-primary {
+        &__left {
+            .articles {
+                .article-content {
+                    padding: 20px;
+                }
+    
+                .article-title {
+                    font-size: 24px;
+                }
+
+                .article-admin {
+                    top: -25px;
+                    padding: 10px 15px;
+                }
+            }
+        }
+    }
+
     // --------------------------------------------------------------------detail
+    .detail-title {
+        font-size: 28px;
+    }
+    .detail-content {
+        figure {
+            margin-bottom: 15px;
+            figcaption {
+                padding: 8px 10px;
+                font-size: 14px;
+            }
+        }
+
+        & p,
+        & li {
+            font-size: 16px;
+
+        }
+
+        & > h2 {
+            font-size: 26px;
+        }
+        & > h3 {
+            font-size: 24px;
+        }
+        & > h4 {
+            font-size: 22px;
+        }
+        & > h5 {
+            font-size: 20px;
+        }
+        & > h6 {
+            font-size: 18px;
+        }
+
+        blockquote {
+            padding: 20px;
+        }
+    }
+
+    .realted-post {
+        &__content {
+            .article-content {
+                padding: 20px;
+            }
+        }
+    }
 
     // --------------------------------------------------------------------footer
     .footer-top {
